@@ -6,7 +6,7 @@
 /*   By: marias-e <marias-e@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 11:41:33 by marias-e          #+#    #+#             */
-/*   Updated: 2022/09/22 12:03:51 by marias-e         ###   ########.fr       */
+/*   Updated: 2022/09/24 11:26:24 by marias-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	(void) lst;
-	return (0);
+	if (lst)
+	{
+		while (lst->next)
+			lst = lst->next;
+	}
+	return (lst);
 }

@@ -6,94 +6,99 @@
 /*   By: marias-e <marias-e@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 10:48:38 by marias-e          #+#    #+#             */
-/*   Updated: 2022/09/22 10:52:10 by marias-e         ###   ########.fr       */
+/*   Updated: 2022/09/27 11:52:14 by marias-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char			**ft_aux_array(char *s, char c);
+static size_t	ft_aux_count(char const *s, char c);
 
-static unsigned int	ft_aux_delim(unsigned int n, char c, char const *s);
+static size_t	ft_aux_iter(char const *s, char c, size_t i);
 
-static unsigned int	ft_aux_count(unsigned int n, char c, char const *s);
+static size_t	ft_aux_len(char const *s, char c, size_t i);
+
+static char		**ft_mem_error(char **array, size_t n);
 
 char	**ft_split(char const *s, char c)
 {
-	unsigned int	w;
-	unsigned int	n;
-	unsigned int	i;
-	unsigned int	j;
-	char			**array;
-
-	w = 0;
-	n = 0;
-	array = ft_aux_array((char *)s, c);
-	while (s[n])
-	{
-		j = 0;
-		n = ft_aux_delim(n, c, s);
-		i = ft_aux_count(n, c, s);
-		if (i == 0)
-		{
-			array[w] = 0;
-			return (array);
-		}
-		array[w] = (char *) malloc((i + 1) * sizeof(char));
-		while (s[n] != s[n + i])
-		{
-			array[w][j] = s[n];
-			n++;
-			j++;
-		}
-		array[w][j] = 0;
-		w++;
-	}
-	return (0);
-}
-
-static unsigned int	ft_aux_delim(unsigned int n, char c, char const *s)
-{
-	while (s[n] && s[n] == c)
-		n++;
-	return (n);
-}
-
-static unsigned int	ft_aux_count(unsigned int n, char c, char const *s)
-{
-	unsigned int	i;
+	char	**array;
+	size_t	n;
+	size_t	w;
+	size_t	i;
 
 	i = 0;
-	while (s[n] && s[n] != c)
+	n = 0;
+	w = ft_aux_count(s, c);
+	if (w == 0)
+		return (ft_calloc(1, sizeof(char *)));
+	array = malloc((w + 1) * sizeof(char *));
+	if (!array)
+		return (NULL);
+	while (s && n < w)
+	{
+		while (s[i] && s[i] == c)
+			i++;
+		array[n] = ft_substr(s, (unsigned int)i, (ft_aux_len(s, c, i)));
+		if (!array[n])
+			return (ft_mem_error(array, n));
+		i = ft_aux_iter(s, c, i);
 		n++;
+	}
+	array[n] = 0;
+	return (array);
+}
+
+static size_t	ft_aux_count(char const *s, char c)
+{
+	size_t	count;
+	size_t	n;
+
+	if (!s)
+		return (0);
+	count = 0;
+	n = 0;
+	while (s[n])
+	{
+		while (s[n] == c)
+			n++;
+		while (s[n] != c && s[n])
+			n++;
+		if (s[n - 1] != c)
+			count++;
+	}
+	return (count);
+}
+
+static size_t	ft_aux_iter(char const *s, char c, size_t i)
+{
+	while (s[i] && s[i] != c)
+		i++;
+	while (s[i] && s[i] == c)
 		i++;
 	return (i);
 }
 
-static char	**ft_aux_array(char	*s, char c)
+static size_t	ft_aux_len(char const *s, char c, size_t i)
 {
-	unsigned int	n;
-	unsigned int	i;
-	unsigned int	w;
-	char			**array;
+	size_t	k;
 
-	n = 0;
-	w = 0;
-	while (s[n])
+	k = 0;
+	while (s[i] && s[i] != c)
 	{
-		i = 0;
-		w++;
-		n = ft_aux_delim(n, c, s);
-		i = ft_aux_count(n, c, s);
-		n = n + i;
+		i++;
+		k++;
 	}
-	array = (char **) malloc(w * sizeof(char *));
-	return (array);
+	return (k);
 }
 
-int	main(void)
+static char	**ft_mem_error(char **array, size_t n)
 {
-	char	**array = ft_split("FFHolaFwenosFdiaFF", 'F');
-	printf("%s", array[1]);
+	while (n > 0)
+	{
+		free(array[n - 1]);
+		n--;
+	}
+	free(array);
 	return (0);
 }

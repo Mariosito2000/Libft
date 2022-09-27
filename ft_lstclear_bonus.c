@@ -6,7 +6,7 @@
 /*   By: marias-e <marias-e@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 11:52:36 by marias-e          #+#    #+#             */
-/*   Updated: 2022/09/22 12:07:00 by marias-e         ###   ########.fr       */
+/*   Updated: 2022/09/27 16:36:58 by marias-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,16 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	(void) lst;
-	(void) del;
-	return ;
+	t_list	*temp;
+
+	if (lst && del && *lst)
+	{
+		temp = *lst;
+		while (temp)
+		{
+			*lst = (*lst)->next;
+			ft_lstdelone(temp, del);
+			temp = *lst;
+		}
+	}
 }

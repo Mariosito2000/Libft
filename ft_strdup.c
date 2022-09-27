@@ -6,7 +6,7 @@
 /*   By: marias-e <marias-e@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:02:04 by marias-e          #+#    #+#             */
-/*   Updated: 2022/09/22 13:08:28 by marias-e         ###   ########.fr       */
+/*   Updated: 2022/09/23 11:59:37 by marias-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 char	*ft_strdup(const char *s1)
 {
-	char	*str;
+	char		*str;
 	size_t		n;
 
 	n = ft_strlen(s1);
 	str = (char *) malloc(n + 1);
-	if(!str)
-		return(0);
+	if (!str)
+		return (0);
 	n = 0;
 	while (s1[n])
 	{

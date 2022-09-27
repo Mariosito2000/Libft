@@ -6,7 +6,7 @@
 /*   By: marias-e <marias-e@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 13:31:02 by marias-e          #+#    #+#             */
-/*   Updated: 2022/09/23 10:42:17 by marias-e         ###   ########.fr       */
+/*   Updated: 2022/09/23 11:55:46 by marias-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*d;
 	size_t	i;
 
-	if(!dst && !src)
+	if (!dst && !src)
 		return (0);
 	s = (char *)src;
 	d = (char *)dst;

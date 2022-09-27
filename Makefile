@@ -6,7 +6,7 @@
 #    By: marias-e <marias-e@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/22 10:17:43 by marias-e          #+#    #+#              #
-#    Updated: 2022/09/22 10:48:53 by marias-e         ###   ########.fr        #
+#    Updated: 2022/09/26 10:27:26 by marias-e         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,6 +63,8 @@ CC	=	gcc -Wall -Wextra -Werror
 
 NAME 	=	libft.a
 
+NAME_B	=	.bonusfile
+
 .c.o: 
 	${CC} -c $< -o ${<:.c=.o} -I.
 
@@ -79,7 +81,10 @@ fclean:		clean
 
 re:		fclean all
 
-bonus:		${OBJS} ${OBJSB}
+bonus:	${NAME_B}
+
+${NAME_B}:	${OBJS} ${OBJSB}
 		ar rc ${NAME} ${OBJS} ${OBJSB}
+		@touch ${NAME_B}
 
 .PHONY:	all clean fclean re bonus

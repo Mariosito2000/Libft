@@ -6,7 +6,7 @@
 /*   By: marias-e <marias-e@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 11:55:45 by marias-e          #+#    #+#             */
-/*   Updated: 2022/09/22 12:07:38 by marias-e         ###   ########.fr       */
+/*   Updated: 2022/09/27 16:52:12 by marias-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	(void) lst;
-	(void) f;
-	return ;
+	while (lst && f)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }
