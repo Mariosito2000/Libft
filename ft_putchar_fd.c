@@ -17,11 +17,3 @@ void	ft_putchar_fd(char c, int fd)
 	write(fd, &c, 1);
 	return ;
 }
-/*
-int	main(void)
-{
-	int	fd;
-
-	fd = open("text.txt", O_CREAT | O_WRONLY, 0600);
-	ft_putchar_fd('A', fd);
-}*/

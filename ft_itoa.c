@@ -57,9 +57,3 @@ static unsigned int	ft_aux_count(unsigned int u)
 	}
 	return (c);
 }
-
-/*int	main(void)
-{
-	printf("\nResultado == %s", ft_itoa(0));
-	return (0);
-}*/
