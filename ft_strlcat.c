@@ -6,7 +6,7 @@
 /*   By: marias-e <marias-e@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 10:26:17 by marias-e          #+#    #+#             */
-/*   Updated: 2022/09/22 11:18:11 by marias-e         ###   ########.fr       */
+/*   Updated: 2022/09/30 10:26:09 by marias-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	n = 0;
 	i = 0;
 	s = 0;
-	while (dst[n] != 0)
+	if (dstsize)
+	{
+		while (dst[n] && n < dstsize)
 		n++;
-	while (src[s] != 0)
+	}
+	while (src[s])
 		s++;
 	if (dstsize <= n)
 		return (s + dstsize);

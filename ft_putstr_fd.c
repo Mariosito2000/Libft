@@ -6,7 +6,7 @@
 /*   By: marias-e <marias-e@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 13:25:15 by marias-e          #+#    #+#             */
-/*   Updated: 2022/09/20 13:38:31 by marias-e         ###   ########.fr       */
+/*   Updated: 2022/09/29 16:41:50 by marias-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	unsigned int	n;
 
+	if (!s || !fd)
+		return ;
 	n = 0;
 	while (s[n])
 		n++;

@@ -6,7 +6,7 @@
 /*   By: marias-e <marias-e@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 16:07:52 by marias-e          #+#    #+#             */
-/*   Updated: 2022/09/24 13:27:29 by marias-e         ###   ########.fr       */
+/*   Updated: 2022/09/29 16:30:27 by marias-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_atoi(const char *str)
 		n = n * 10 + (str[i] - '0');
 		i++;
 	}
-	if (n > 2147483647 && sign > 0)
+	if ((unsigned int)n > 2147483647 && sign > 0)
 		return (-1);
 	if ((unsigned int)n > 2147483648 && sign < 0)
 		return (0);
