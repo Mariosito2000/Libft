@@ -10,6 +10,16 @@
 #                                                                              #
 # **************************************************************************** #
 
+# Color Definition #
+RED     := \033[0;31m
+YELLOW  := \033[0;33m
+BLUE    := \033[0;34m
+GREEN   := \033[1;32m
+MAGENTA := \033[0;35m
+CYAN    := \033[0;36m
+WHITE   := \033[0;37m
+RESET   := \033[0m
+
 # Output library
 NAME = libft.a
 
@@ -69,33 +79,48 @@ OBJS =		$(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRCS))
 # Compiler and flags
 CC = gcc
 
-FLAGS = -Wall -Wextra -Werror -I$(INCDIR)
+FLAGS = -Wall -Wextra -Werror -I $(INCDIR)
+
+# Test files
+TEST_EXEC = test_program
+
+TEST_SRC = main.c
 
 # Default target that will be run by default
 all: $(NAME)
 
 # Rule to create the static library
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+	@ar rc $(NAME) $(OBJS)
+	@ranlib $(NAME)
+	@echo "$(YELLOW)libft.a $(GREEN)compiled successfully.$(RESET)"
 
 # Rule to compile .c files into .o files in obj/
 $(OBJDIR)/%.o: $(SRCDIR)/%.c | $(OBJDIR)
-	$(CC) $(FLAGS) -c $< -o $@
+	@$(CC) $(FLAGS) -c $< -o $@
 
 # Create the obj directory if it doesn't exist
 $(OBJDIR):
-	mkdir -p $(OBJDIR)
+	@mkdir -p $(OBJDIR)
+
+# Rule to compile and run the test program
+test: $(NAME) $(TEST_SRC)
+	@$(CC) $(FLAGS) $(TEST_SRC) -L. -lft -o $(TEST_EXEC)
+	@echo "$(BLUE)Compiling and executing $(MAGENTA)test_program$(BLUE).$(RESET)"
+	./$(TEST_EXEC)
 
 # Clean up object files and the library
 clean:
-	rm -f $(OBJS)
-	rm -rf $(OBJDIR)
+	@rm -f $(OBJS)
+	@rm -rf $(OBJDIR)
+	@rm -f $(TEST_EXEC)
+	@echo "$(RED)Removing objects and $(MAGENTA)test_program$(RED).$(RESET)"
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@echo "$(RED)Removing $(YELLOW)libft.a$(RED).$(RESET)"
 
 re: fclean all
 
 # Phony targets
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re test

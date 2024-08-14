@@ -34,17 +34,20 @@ Para compilar la librería en el archivo "**libft.a**" usa el comando "make" en 
 
 Tienes disponibles los siguientes comandos:
 
-**make / make all**:
+**make / make all**  
 Compila la librería.
 
-**make clean**:
+**make clean**  
 Borra los objetos pero no la librería.
 
-**make fclean**:
+**make fclean**  
 Borra los objetos y la librería.
 
-**make re**:
+**make re**  
 make fclean + make.
+
+**make test**  
+Se incluye un archivo **main.c** con unas cuantas pruebas, siéntete libre de probar cualquier función en él, para después compilarlo y ejecutarlo con el comando **make test**.
 
 ## Licencia
 MIT License
@@ -103,17 +106,20 @@ To compile the library into the "**libft.a**" file, use the "make" command in th
 
 The following commands are available:
 
-**make / make all**:
+**make / make all**  
 Compiles the library.
 
-**make clean**:
+**make clean**  
 Deletes the objects but not the library.
 
-**make fclean**:
+**make fclean**  
 Deletes the objects and the library.
 
-**make re**:
+**make re**  
 make fclean + make.
+
+**make test**  
+A **main.c** file with some tests is also given, feel free to test any function and compile it with the **make test** command.
 
 ## License
 MIT License
