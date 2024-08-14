@@ -1,8 +1,8 @@
 # Libft
 
-- [English](#English)
+# Español
 
-## Español
+[English](#English)
 
 ## Descripción
 Libft es una librería de funciones estandar básicas en C.
@@ -69,33 +69,33 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## English 
+# English
 
-- [Español](#Español)
+[Español](#Español)
 
 ## Description
 Libft is a library of basic standard functions in C.
 
 This is the first project of 42 School. Although the structure has been modified for convenience, the code has not changed.
 
-## Índice
-- [Instalación](#instalación)
-- [Uso](#uso)
-- [Licencia](#licencia)
+## Index
+- [Installation](#installation)
+- [Use](#use)
+- [License](#license)
 
-## Instalación
-Para poder hacer uso de esta librería necesitaras:
+## Installation
+To be able to use this library you will need:
 
-Usar un sistema operativo Linux o una máquina equivalente.
+Use a Linux operating system or an equivalent machine.
 
-make : una utilidar para abreviar comandos
+make: a utility to shorten commands.
 
-gcc : (GNU Compiler Collection) un compilador de C
+gcc: (GNU Compiler Collection) a C compiler.
 
-# Clonar el repositorio
+### Clone the repository
 git clone git@github.com:Mariosito2000/Libft.git
 
-# Navegar al directorio del proyecto
+### Navigate to the project directory
 cd Libft
 
 ## Use
