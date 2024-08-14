@@ -24,7 +24,7 @@ Usar un sistema operativo Linux o una máquina equivalente.
 **gcc**: (GNU Compiler Collection) un compilador de C
 
 ### Clonar el repositorio
-git clone git@github.com:Mariosito2000/Libft.git
+git clone **git@github.com:Mariosito2000/Libft.git**
 
 ### Navegar al directorio del proyecto
 cd Libft
@@ -96,7 +96,7 @@ Use a Linux operating system or an equivalent machine.
 **gcc**: (GNU Compiler Collection) a C compiler.
 
 ### Clone the repository
-git clone git@github.com:Mariosito2000/Libft.git
+git clone **git@github.com:Mariosito2000/Libft.git**
 
 ### Navigate to the project directory
 cd Libft
