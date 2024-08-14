@@ -2,12 +2,12 @@
 
 # Español
 
-[English](#English)
+[**English**](#English)
 
 ## Descripción
-Libft es una librería de funciones estandar básicas en C.
+**Libft** es una librería de funciones estandar básicas en C.
 
-Este es el primer proyecto de 42 School, aunque la estructura ha sido modificada para mayor comodidad el código no ha cambiado.
+Este es el primer proyecto de **42 School**, aunque la estructura ha sido modificada para mayor comodidad, el código no ha cambiado.
 
 ## Índice
 - [Instalación](#instalación)
@@ -19,9 +19,9 @@ Para poder hacer uso de esta librería necesitaras:
 
 Usar un sistema operativo Linux o una máquina equivalente.
 
-make : una utilidar para abreviar comandos
+**make**: una utilidar para abreviar comandos
 
-gcc : (GNU Compiler Collection) un compilador de C
+**gcc**: (GNU Compiler Collection) un compilador de C
 
 ### Clonar el repositorio
 git clone git@github.com:Mariosito2000/Libft.git
@@ -30,20 +30,20 @@ git clone git@github.com:Mariosito2000/Libft.git
 cd Libft
 
 ## Uso
-Para compilar la librería en el archivo "libft.a" usa el comando "make" en la terminal desde la raiz del proyecto.
+Para compilar la librería en el archivo "**libft.a**" usa el comando "make" en la terminal desde la raiz del proyecto.
 
 Tienes disponibles los siguientes comandos:
 
-- make / make all
+**make / make all**:
 Compila la librería.
 
-- make clean
+**make clean**:
 Borra los objetos pero no la librería.
 
-- make fclean
+**make fclean**:
 Borra los objetos y la librería.
 
-- make re
+**make re**:
 make fclean + make.
 
 ## Licencia
@@ -71,12 +71,12 @@ SOFTWARE.
 
 # English
 
-[Español](#Español)
+[**Español**](#Español)
 
 ## Description
-Libft is a library of basic standard functions in C.
+**Libft** is a library of basic standard functions in C.
 
-This is the first project of 42 School. Although the structure has been modified for convenience, the code has not changed.
+This is the first project of **42 School**. Although the structure has been modified for convenience, the code has not changed.
 
 ## Index
 - [Installation](#installation)
@@ -88,9 +88,9 @@ To be able to use this library you will need:
 
 Use a Linux operating system or an equivalent machine.
 
-make: a utility to shorten commands.
+**make**: a utility to shorten commands.
 
-gcc: (GNU Compiler Collection) a C compiler.
+**gcc**: (GNU Compiler Collection) a C compiler.
 
 ### Clone the repository
 git clone git@github.com:Mariosito2000/Libft.git
@@ -99,20 +99,20 @@ git clone git@github.com:Mariosito2000/Libft.git
 cd Libft
 
 ## Use
-To compile the library into the "libft.a" file, use the "make" command in the terminal from the root of the project.
+To compile the library into the "**libft.a**" file, use the "make" command in the terminal from the root of the project.
 
 The following commands are available:
 
-- make / make all
+**make / make all**:
 Compiles the library.
 
-- make clean
+**make clean**:
 Deletes the objects but not the library.
 
-- make fclean
+**make fclean**:
 Deletes the objects and the library.
 
-- make re
+**make re**:
 make fclean + make.
 
 ## License
