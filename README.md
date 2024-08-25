@@ -9,6 +9,8 @@
 
 Este es el primer proyecto de **42 School**, aunque la estructura ha sido modificada para mayor comodidad, el código no ha cambiado.
 
+***Hay un documento PDF que explica el proyecto en el directorio raíz del repositorio.***
+
 ## Índice
 - [Instalación](#instalación)
 - [Uso](#uso)
@@ -80,6 +82,8 @@ SOFTWARE.
 **Libft** is a library of basic standard functions in C.
 
 This is the first project of **42 School**. Although the structure has been modified for convenience, the code has not changed.
+
+***A PDF document explaining the project is available in the root directory of the repository.***
 
 ## Index
 - [Installation](#installation)
