@@ -9,7 +9,7 @@
 
 Este es el primer proyecto de **42 School**, aunque la estructura ha sido modificada para mayor comodidad, el código no ha cambiado.
 
-***Hay un documento PDF que explica el proyecto en el directorio raíz del repositorio.***
+***Hay un documento PDF que explica el proyecto en el directorio raíz del repositorio. (es.subject.pdf)***
 
 ## Índice
 - [Instalación](#instalación)
@@ -83,7 +83,7 @@ SOFTWARE.
 
 This is the first project of **42 School**. Although the structure has been modified for convenience, the code has not changed.
 
-***A PDF document explaining the project is available in the root directory of the repository.***
+***A PDF document explaining the subject is available in the root directory of the repository. (en.subject.pdf)***
 
 ## Index
 - [Installation](#installation)
